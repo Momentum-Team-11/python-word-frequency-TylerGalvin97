@@ -1,0 +1,33 @@
+    with open(file) as file:
+        lines = file.read()
+ # how do we make this string into a list of words?
+    lines - lines.split() # turns the string into a list of words
+# count words now 
+    count_words(lines)
+
+def count_words(lines):
+    print(len(lines))
+# how can we take this list and turn it into a dictionary that tracks occurences 
+# create a dictionary
+    word_count = {}
+# take the list and add each word to the dict as a key
+# and record the occurence of the word 
+    # how could we get the words from the list into the dict as keys
+    # we could do a for loop using the list!
+    for word in lines:
+        print(word)
+        # now that I have each word, I can add it to the dict as a key 
+        # word count looks like this {}
+        # I want it to look like this :
+        # {
+        #  "how" : 1
+        # }
+        # if word in word_count:
+            # increment the value by 1
+        # else:
+            # add key and value pair with the word as the key, and set the value to 1
+        word_count[word] = 1
+    print (word_count)
+
+# if key is not  in the dict, add it with a value of 1, 
+# if it IS in the dict already, add 1 to its current value
